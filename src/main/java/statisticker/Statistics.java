@@ -15,7 +15,7 @@ public class Statistics
 		}
 	}
     public static Stats getStatistics(List<Float> numbers) {
-    	if(numbers.size()>0){
+    	if(!numbers.isEmpty()){
     		float average=0;
         	float min=numbers.get(0);
         	float max=numbers.get(0);
@@ -28,7 +28,7 @@ public class Statistics
         	}
         	average=average/(float)numbers.size();
         	System.out.println(min+ " "+max+" "+average);
-        	Stats obj=new Stats(average,min,max);
+        	Stats obj = new Stats(average,min,max);
         	return obj;
     	}
         return (new Stats(Float.NaN,Float.NaN,Float.NaN));
